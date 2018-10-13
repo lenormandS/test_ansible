@@ -1,0 +1,11 @@
+---
+  - name: Installation de GIT
+    apt:
+      name: git
+
+  - name: Clonage du depot GIT
+    git:
+      repo: https://github.com/lenormandS/{{ repo }}.git
+      clone: yes
+      dest: /var/www/html/{{ repo }}
+...

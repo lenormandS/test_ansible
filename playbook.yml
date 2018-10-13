@@ -1,0 +1,21 @@
+---
+  - name: Installation de server web
+    hosts: web
+    remote_user: root
+    vars:
+      user: seb
+      domain: test
+      repo: denis_web
+
+    roles:
+      - apache
+      - php
+      - git
+
+  - name: Installation de Mysql
+    hosts: bdd
+    remote_user: root
+
+    roles:
+      - mysql
+...

@@ -1,0 +1,10 @@
+---
+  - name: Installation de Apache2
+    apt: name={{ item }}
+    with_items:
+      - apache2
+
+  - name: Enable rewrite mod
+    command: a2enmod rewrite
+    notify: apache update
+...
