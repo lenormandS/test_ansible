@@ -6,16 +6,20 @@
       user: seb
       domain: test
       repo: denis_web
+      token_slack: "T9TTWMCNL/BDFJZMYSZ/rljAho2mxxOiV3En6ap8rT55"
+      channel_slack: "#ansible"
+      domain_slack: "freeforlive.slack.com"
 
     roles:
       - apache
       - php
       - git
 
-  - name: Installation de Mysql
-    hosts: bdd
-    remote_user: root
+  #- name: Installation de Mysql
+  #  hosts: bdd
+  #  remote_user: root
 
-    roles:
-      - mysql
+  #  roles:
+  #    - mysql
+      #- notifSlack
 ...

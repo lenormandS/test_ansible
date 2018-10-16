@@ -1,0 +1,19 @@
+---
+
+   - name: Send Notif to Slack
+     slack:
+       token: "{{ token_slack }}"
+       domain: "{{ domain_slack }}"
+       msg: '{{ inventory_hostname }} completed'
+       channel: "{{ channel_slack }}"
+       username: 'Ansible Magueule'
+
+   - rescue:
+     - name:
+       slack:
+         token: "{{ token_slack }}"
+         domain: "{{ domain_slack }}"
+         msg: '{{ ansible_failed_task.name }}'
+         channel: "{{ channel_slack }}"
+         username: "test error"
+...

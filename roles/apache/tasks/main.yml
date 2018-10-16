@@ -4,6 +4,17 @@
     with_items:
       - apache2
 
+  - name: Delete default index
+    file:
+      path: "/var/www/html/index.html"
+      state: absent
+
+  - name: Replace index
+    replace:
+      dest: "/etc/apache2/sites-available/000-default.conf"
+      regexp: "/var/www/html"
+      replace: "/var/www/html/denis_web/index.html"
+
   - name: Enable rewrite mod
     command: a2enmod rewrite
     notify: apache update

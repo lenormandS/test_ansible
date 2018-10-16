@@ -10,10 +10,11 @@
     - php5.6-common
     - libapache2-mod-php5.6
     - php5.6-mysql
-    #- php5.6-oauth
-    #- php5.6-curl
-    #- php5.6-mbstring
+    - php5.6-oauth
+    - php5.6-curl
+    - php5.6-mbstring
     #- php5.6-mcrypt
-    #- php5.6-mysql
-    #- php5.6-xml
+    - php5.6-mysql
+    - php5.6-xml
+
 ...

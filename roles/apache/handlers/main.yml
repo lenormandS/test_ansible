@@ -4,4 +4,12 @@
     service:
       name: apache2
       state: restarted
+
+  - name: delete index
+    slack:
+     token: "{{ token_slack }}"
+     domain: "{{ domain_slack }}"
+     msg: 'test'
+     channel: "{{ channel_slack }}"
+     username: 'Apache Ma Couille'
 ...
