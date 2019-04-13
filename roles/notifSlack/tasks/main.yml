@@ -1,10 +1,10 @@
 ---
 
-   - name: Send Notif to Slack
+   - name: Send notif to Slack
      slack:
        token: "{{ token_slack }}"
        domain: "{{ domain_slack }}"
-       msg: '{{ inventory_hostname }} completed'
+       msg: '{{ inventory_hostname }} finished'
        channel: "{{ channel_slack }}"
        username: 'Ansible Magueule'
 
