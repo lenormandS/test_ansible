@@ -1,0 +1,20 @@
+---
+- name: Installation de php5.6
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+    update_cache: yes
+
+- name: Installation des dependence php5.6
+  apt: name={{ item }}
+  with_items:
+    - php5.6-common
+    - libapache2-mod-php5.6
+    - php5.6-mysql
+    - php5.6-oauth
+    - php5.6-curl
+    - php5.6-mbstring
+    #- php5.6-mcrypt
+    - php5.6-mysql
+    - php5.6-xml
+
+...
