@@ -15,11 +15,11 @@
       - php
       - git
 
-  #- name: Installation de Mysql
-  #  hosts: bdd
-  #  remote_user: root
+  - name: Installation de mysql
+    hosts: bdd
+    remote_user: root
 
-  #  roles:
-  #    - mysql
-      #- notifSlack
+    roles:
+      - mysql
+      - notifSlack
 ...
